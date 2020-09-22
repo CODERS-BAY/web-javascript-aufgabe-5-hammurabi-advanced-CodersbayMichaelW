@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Hammurabi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <h1>Hammurabi</h1>
+    </header>
+
+    <main>
+        <!-- Stats -->
+        <section class="stats">
+            <h2>Stats</h2>
+            <section class="information">
+                <div class="year">
+                    <p>Year:</p>
+                    <p>1</p>
+                </div>
+                <div class="grain">
+                    <p>Grain:</p>
+                    <p>6000</p>
+                </div>
+                <div class="citizen">
+                    <p>Citizen:</p>
+                    <p>100</p>
+                </div>
+                <div class="land">
+                    <p>Acre:</p>
+                    <p>400</p>
+                </div>
+            </section>
+        </section>
+
+        <!-- Options to pick -->
+        <section class="options">
+            <button type="button" class="tablinks" onclick="openInput(event, 'food')">Food Allocation</button>
+            <button type="button" class="tablinks" onclick="openInput(event, 'sowing')">Sowing</button>
+            <button type="button" class="tablinks" onclick="openInput(event, 'acreBuy')">Buy Acre</button>
+            <button type="button" class="tablinks" onclick="openInput(event, 'acreSell')">Sell Acre</button>
+            <button type="button" class="tablinks" onclick="openInput(event, 'nextRound')">Next Round</button>
+        </section>
+
+        <!-- input of user -->
+        <section class="input">
+            <div class="tabcontent" id="food">
+                <article class="grainInput">
+                    <label>Grain:</label>
+                    <input>
+                </article>
+
+                <article class="changes">
+                    <div class="before">
+                        <p>Before:</p>
+                        <p></p>
+                    </div>
+                    
+                    <div class="after">
+                        <p>After:</p>
+                        <p></p>
+                    </div>
+                </article>
+
+                <article class="confirm">
+                    <button type="button">Confirm</button>
+                </article>
+            </div>
+
+            <div class="tabcontent" id="sowing">
+                <article class="sowingInput">
+                    <label>Sowing:</label>
+                    <input>
+                </article>
+
+                <article class="changes">
+                    <div class="before">
+                        <p>Before:</p>
+                        <p></p>
+                    </div>
+                    
+                    <div class="after">
+                        <p>After:</p>
+                        <p></p>
+                    </div>
+                </article>
+
+                <article class="confirm">
+                    <button type="button">Confirm</button>
+                </article>
+            </div>
+
+            <div class="tabcontent" id="acreBuy">
+                <article class="landBuyInput">
+                    <label>Buy Acre:</label>
+                    <input>
+                </article>
+
+                <article class="changes">
+                    <div class="before">
+                        <p>Before:</p>
+                        <p></p>
+                    </div>
+                    
+                    <div class="after">
+                        <p>After:</p>
+                        <p></p>
+                    </div>
+                </article>
+
+                <article class="confirm">
+                    <button type="button">Confirm</button>
+                </article>
+            </div>
+
+            <div class="tabcontent" id="acreSell">
+                <article class="landSellInput">
+                    <label>Sell Acre:</label>
+                    <input>
+                </article>
+
+                <article class="changes">
+                    <div class="before">
+                        <p>Before:</p>
+                        <p></p>
+                    </div>
+                    
+                    <div class="after">
+                        <p>After:</p>
+                        <p></p>
+                    </div>
+                </article>
+
+                <article class="confirm">
+                    <button type="button">Confirm</button>
+                </article>
+            </div>
+
+            <div class="tabcontent nextRound" id="nextRound">
+                <button type="button">Next Round</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type ="text/javascript" src="js/myScript.js"></script>
+</body>
+</html>
