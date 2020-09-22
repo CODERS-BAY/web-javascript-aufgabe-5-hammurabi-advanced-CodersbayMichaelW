@@ -21,19 +21,19 @@
             <section class="information">
                 <div class="year">
                     <p>Year:</p>
-                    <p>1</p>
+                    <p id="year"></p>
                 </div>
                 <div class="grain">
                     <p>Grain:</p>
-                    <p>6000</p>
+                    <p id="grain"></p>
                 </div>
                 <div class="citizen">
                     <p>Citizen:</p>
-                    <p>100</p>
+                    <p id="citizen"></p>
                 </div>
                 <div class="land">
                     <p>Acre:</p>
-                    <p>400</p>
+                    <p id="acre"></p>
                 </div>
             </section>
         </section>
@@ -49,10 +49,11 @@
 
         <!-- input of user -->
         <section class="input">
+            <!-- Food -->
             <div class="tabcontent" id="food">
                 <article class="grainInput">
                     <label>Grain:</label>
-                    <input>
+                    <input id="inputfieldFood">
                 </article>
 
                 <article class="changes">
@@ -68,14 +69,15 @@
                 </article>
 
                 <article class="confirm">
-                    <button type="button">Confirm</button>
+                    <button type="button" id="buttonFood">Confirm</button>
                 </article>
             </div>
 
+            <!-- Sowing -->
             <div class="tabcontent" id="sowing">
                 <article class="sowingInput">
                     <label>Sowing:</label>
-                    <input>
+                    <input id="inputfieldSowing">
                 </article>
 
                 <article class="changes">
@@ -91,14 +93,15 @@
                 </article>
 
                 <article class="confirm">
-                    <button type="button">Confirm</button>
+                    <button type="button" id="buttonSowing">Confirm</button>
                 </article>
             </div>
 
+            <!-- Acre Buy -->
             <div class="tabcontent" id="acreBuy">
                 <article class="landBuyInput">
                     <label>Buy Acre:</label>
-                    <input>
+                    <input id="inputfieldAcreBuy">
                 </article>
 
                 <article class="changes">
@@ -114,14 +117,15 @@
                 </article>
 
                 <article class="confirm">
-                    <button type="button">Confirm</button>
+                    <button type="button" id="buttonBuyAcre">Confirm</button>
                 </article>
             </div>
 
+            <!-- Acre Sell -->
             <div class="tabcontent" id="acreSell">
                 <article class="landSellInput">
                     <label>Sell Acre:</label>
-                    <input>
+                    <input id="inputfieldAcreSell">
                 </article>
 
                 <article class="changes">
@@ -137,12 +141,13 @@
                 </article>
 
                 <article class="confirm">
-                    <button type="button">Confirm</button>
+                    <button type="button" id="buttonSellAcre">Confirm</button>
                 </article>
             </div>
 
+            <!-- Next Round -->
             <div class="tabcontent nextRound" id="nextRound">
-                <button type="button">Next Round</button>
+                <button type="button" id="buttonNextRound">Next Round</button>
             </div>
 
         </section>

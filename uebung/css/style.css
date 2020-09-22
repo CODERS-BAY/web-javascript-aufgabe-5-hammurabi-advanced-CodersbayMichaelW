@@ -106,7 +106,7 @@ main {
     font-size: 1.5rem;
 }
 .tabcontent article:first-of-type input {
-    width: 5rem;
+    width: 8rem;
     text-align: center;
     border-radius: 10px;
 }
