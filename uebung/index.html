@@ -16,7 +16,7 @@
 
     <main>
         <!-- Stats -->
-        <section class="stats">
+        <article class="stats">
             <h2>Stats</h2>
             <section class="information">
                 <div class="year">
@@ -36,121 +36,128 @@
                     <p id="acre"></p>
                 </div>
             </section>
-        </section>
+        </article>
 
         <!-- Options to pick -->
-        <section class="options">
-            <button type="button" class="tablinks" onclick="openInput(event, 'food')">Food Allocation</button>
-            <button type="button" class="tablinks" onclick="openInput(event, 'sowing')">Sowing</button>
+        <article class="options">
+            <button type="button" id="tabFood" class="tablinks" onclick="openInput(event, 'food')">Food Allocation</button>
+            <button type="button" id="tabSowing" class="tablinks" onclick="openInput(event, 'sowing')">Sowing</button>
             <button type="button" class="tablinks" onclick="openInput(event, 'acreBuy')">Buy Acre</button>
             <button type="button" class="tablinks" onclick="openInput(event, 'acreSell')">Sell Acre</button>
             <button type="button" class="tablinks" onclick="openInput(event, 'nextRound')">Next Round</button>
-        </section>
+        </article>
 
         <!-- input of user -->
-        <section class="input">
+        <article class="input">
             <!-- Food -->
-            <div class="tabcontent" id="food">
-                <article class="grainInput">
+            <section class="tabcontent" id="food">
+                <div class="grainInput">
                     <label>Grain:</label>
-                    <input id="inputfieldFood">
-                </article>
+                    <input type="number" id="inputfieldFood">
+                </div>
 
-                <article class="changes">
+                <div class="changes">
                     <div class="before">
                         <p>Before:</p>
-                        <p></p>
+                        <div class="beforeOutput">
+                            <p class="beforeGrains"></p>
+                            <p class="beforeCitizen"></p>
+                        </div>
                     </div>
                     
                     <div class="after">
                         <p>After:</p>
-                        <p></p>
+                        <div class="afterOutput">
+                            <p class="afterGrains"></p>
+                            <p class="afterCitizen"></p>
+                        </div>
                     </div>
-                </article>
+                </div>
 
-                <article class="confirm">
-                    <button type="button" id="buttonFood">Confirm</button>
-                </article>
-            </div>
+                <div class="confirm">
+                    <button type="button" class="active hover" id="buttonFood">Confirm</button>
+                </div>
+            </section>
 
             <!-- Sowing -->
-            <div class="tabcontent" id="sowing">
-                <article class="sowingInput">
+            <section class="tabcontent" id="sowing">
+                <div class="sowingInput">
                     <label>Sowing:</label>
-                    <input id="inputfieldSowing">
-                </article>
+                    <input type="number" id="inputfieldSowing">
+                </div>
 
-                <article class="changes">
+                <div class="changes">
                     <div class="before">
                         <p>Before:</p>
-                        <p></p>
+                        <div class="beforeOutput">
+                            <p class="beforeGrains"></p>
+                        </div>
                     </div>
                     
                     <div class="after">
                         <p>After:</p>
-                        <p></p>
+                        <div class="afterOutput">
+                            <p class="afterGrains"></p>
+                            <p class="changeOfGrains"></p>
+                        </div>
                     </div>
-                </article>
+                </div>
 
-                <article class="confirm">
-                    <button type="button" id="buttonSowing">Confirm</button>
-                </article>
-            </div>
+                <div class="confirm">
+                    <button type="button" class="active hover" id="buttonSowing">Confirm</button>
+                </div>
+            </section>
 
             <!-- Acre Buy -->
-            <div class="tabcontent" id="acreBuy">
-                <article class="landBuyInput">
+            <section class="tabcontent" id="acreBuy">
+                <div class="landBuyInput">
                     <label>Buy Acre:</label>
-                    <input id="inputfieldAcreBuy">
-                </article>
+                    <input type="number" id="inputfieldAcreBuy">
+                </div>
 
-                <article class="changes">
+                <div class="changes">
                     <div class="before">
                         <p>Before:</p>
-                        <p></p>
                     </div>
                     
                     <div class="after">
                         <p>After:</p>
-                        <p></p>
                     </div>
-                </article>
+                </div>
 
-                <article class="confirm">
-                    <button type="button" id="buttonBuyAcre">Confirm</button>
-                </article>
-            </div>
+                <div class="confirm">
+                    <button type="button" class="active hover" id="buttonBuyAcre">Confirm</button>
+                </div>
+            </section>
 
             <!-- Acre Sell -->
-            <div class="tabcontent" id="acreSell">
-                <article class="landSellInput">
+            <section class="tabcontent" id="acreSell">
+                <div class="landSellInput">
                     <label>Sell Acre:</label>
-                    <input id="inputfieldAcreSell">
-                </article>
+                    <input type="number" id="inputfieldAcreSell">
+                </div>
 
-                <article class="changes">
+                <div class="changes">
                     <div class="before">
                         <p>Before:</p>
-                        <p></p>
                     </div>
                     
                     <div class="after">
                         <p>After:</p>
-                        <p></p>
                     </div>
-                </article>
+                </div>
 
-                <article class="confirm">
-                    <button type="button" id="buttonSellAcre">Confirm</button>
-                </article>
-            </div>
+                <div class="confirm">
+                    <button type="button" class="active hover" id="buttonSellAcre">Confirm</button>
+                </div>
+            </section>
 
             <!-- Next Round -->
-            <div class="tabcontent nextRound" id="nextRound">
-                <button type="button" id="buttonNextRound">Next Round</button>
-            </div>
+            <section class="tabcontent nextRound" id="nextRound">
+                <button type="button" class="active hover" id="buttonNextRound">Next Round</button>
+            </section>
 
-        </section>
+        </article>
     </main>
 
     <footer>
