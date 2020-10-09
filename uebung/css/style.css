@@ -62,6 +62,20 @@ main {
     margin-right: 0.4rem;
 }
 
+.acrePrice {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.acrePrice div {
+    display: flex;
+}
+.acrePrice div p:first-of-type {
+    margin-right: 0.4rem;
+}
+
 /* options */
 .options {
     margin-top: 5rem;
@@ -140,9 +154,21 @@ main {
 }
 
 
-/* nextRound button */
+
+
+/* NEXT ROUND */
 .nextRound {
     text-align: center;
+    margin-left: 0;
+}
+/* confirmed */
+.confirmed {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+.confirmed p {
+    font-size: 1.2rem;
 }
 /* Confirm button */
 .tabcontent .confirm button {
@@ -162,10 +188,23 @@ main {
     transform: scale(0.95);
 }
 
+.confirmedFalse {
+    color: red;
+    text-shadow: 0px 0px 1px var(--white);
+}
+.confirmedTrue {
+    color: greenyellow;
+    text-shadow: 0px 0px 1px var(--white);
+}
+
 @media (min-width: 850px) {
     /* main */
     /* stats */
     .information {
+        font-size: 1.5rem;
+    }
+    /* acrePrice */
+    .acrePrice {
         font-size: 1.5rem;
     }
     /* options */
@@ -205,5 +244,10 @@ main {
     }
     .confirm {
         margin-top: 4rem;
+    }
+
+    /* tab next round */
+    .confirmed p {
+        font-size: 2rem;
     }
 }

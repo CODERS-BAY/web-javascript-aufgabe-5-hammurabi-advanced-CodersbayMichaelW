@@ -38,13 +38,24 @@
             </section>
         </article>
 
+        <article class="acrePrice">
+            <div>
+                <p>Sell Price of Acre:</p>
+                <p id="acreSellPrice"></p>
+            </div>   
+            <div>
+                <p>Buy Price of Acre:</p>
+                <p id="acreBuyPrice"></p>
+            </div>
+        </article>
+
         <!-- Options to pick -->
         <article class="options">
             <button type="button" id="tabFood" class="tablinks" onclick="openInput(event, 'food')">Food Allocation</button>
             <button type="button" id="tabSowing" class="tablinks" onclick="openInput(event, 'sowing')">Sowing</button>
-            <button type="button" class="tablinks" onclick="openInput(event, 'acreBuy')">Buy Acre</button>
-            <button type="button" class="tablinks" onclick="openInput(event, 'acreSell')">Sell Acre</button>
-            <button type="button" class="tablinks" onclick="openInput(event, 'nextRound')">Next Round</button>
+            <button type="button" id="tabSellAcre" class="tablinks" onclick="openInput(event, 'acreSell')">Sell Acre</button>
+            <button type="button" id="tabBuyAcre" class="tablinks" onclick="openInput(event, 'acreBuy')">Buy Acre</button>
+            <button type="button" id="tabNextRound" class="tablinks" onclick="openInput(event, 'nextRound')">Next Round</button>
         </article>
 
         <!-- input of user -->
@@ -118,10 +129,18 @@
                 <div class="changes">
                     <div class="before">
                         <p>Before:</p>
+                        <div class="beforeOutput">
+                            <p class="beforeGrains"></p>
+                            <p class="beforeAcres"></p>
+                        </div>
                     </div>
                     
                     <div class="after">
                         <p>After:</p>
+                        <div class="afterOutput">
+                            <p class="afterGrains"></p>
+                            <p class="afterAcres"></p>
+                        </div>
                     </div>
                 </div>
 
@@ -140,10 +159,18 @@
                 <div class="changes">
                     <div class="before">
                         <p>Before:</p>
+                        <div class="beforeOutput">
+                            <p class="beforeGrains"></p>
+                            <p class="beforeAcres"></p>
+                        </div>
                     </div>
                     
                     <div class="after">
                         <p>After:</p>
+                        <div class="afterOutput">
+                            <p class="afterGrains"></p>
+                            <p class="afterAcres"></p>
+                        </div>
                     </div>
                 </div>
 
@@ -154,6 +181,12 @@
 
             <!-- Next Round -->
             <section class="tabcontent nextRound" id="nextRound">
+                <div class="confirmed">
+                    <p id="cFood" class="confirmedFalse">Food</p>
+                    <p id="cSowing" class="confirmedFalse">Sowing</p>
+                    <p id="cSellAcre" class="confirmedFalse">Sell Acre</p>
+                    <p id="cBuyAcre" class="confirmedFalse">Buy Acre</p>
+                </div>
                 <button type="button" class="active hover" id="buttonNextRound">Next Round</button>
             </section>
 
