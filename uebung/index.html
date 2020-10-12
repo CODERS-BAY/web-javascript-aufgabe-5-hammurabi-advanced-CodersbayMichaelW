@@ -49,6 +49,10 @@
             </div>
         </article>
 
+        <article class="gameResult">
+            <h3 id="resultText"></h3>
+        </article>
+
         <!-- Options to pick -->
         <article class="options">
             <button type="button" id="tabFood" class="tablinks" onclick="openInput(event, 'food')">Food Allocation</button>
@@ -188,6 +192,14 @@
                     <p id="cBuyAcre" class="confirmedFalse">Buy Acre</p>
                 </div>
                 <button type="button" class="active hover" id="buttonNextRound">Next Round</button>
+
+                <div class="confirmentationOfNextRound confirmBox">
+                    <p>There is a task open. Do you want to proceed anyways?</p>
+                    <div>
+                        <button type="button" class="active hover" onclick="doNextRound()">Yes</button>
+                        <button type="button" class="active hover" onclick="closeConfirmentationOfNextRound()">No</button>
+                    </div>
+                </div>
             </section>
 
         </article>

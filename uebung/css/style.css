@@ -76,6 +76,17 @@ main {
     margin-right: 0.4rem;
 }
 
+/* game result */
+.gameResult {
+    display: none;
+    text-align: center;
+}
+.gameResult h3 {
+    font-size: 2rem;
+    color: var(--cyan);
+    margin-top: 4rem;
+}
+
 /* options */
 .options {
     margin-top: 5rem;
@@ -160,6 +171,7 @@ main {
 .nextRound {
     text-align: center;
     margin-left: 0;
+    margin-bottom: 8rem;
 }
 /* confirmed */
 .confirmed {
@@ -197,6 +209,20 @@ main {
     text-shadow: 0px 0px 1px var(--white);
 }
 
+/* confirm next round */
+.confirmBox {
+    display: none;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: var(--black);
+    height: 5rem;
+    align-items: center;
+}
+.confirmBox p {
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
 @media (min-width: 850px) {
     /* main */
     /* stats */
@@ -214,6 +240,11 @@ main {
     /* hover effect to options */
     .options button:hover {
         box-shadow: 0px 0px 15px var(--white);
+    }
+
+    /* game result */
+    .gameResult h3 {
+        font-size: 2.5rem;
     }
 
     /* input of user */
@@ -249,5 +280,10 @@ main {
     /* tab next round */
     .confirmed p {
         font-size: 2rem;
+    }
+
+    .confirmP {
+        margin-right: 1rem;
+        font-size: 1.5rem;
     }
 }

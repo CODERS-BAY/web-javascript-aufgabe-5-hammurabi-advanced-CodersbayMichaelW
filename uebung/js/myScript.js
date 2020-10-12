@@ -100,7 +100,7 @@ function foodSetStandardValues() {
   if (!confirmFood) {
     // to stay even in citizens, when enough grains is available
     (citizens * 40 <= grains) ? document.getElementById("inputfieldFood").value = citizens * 40
-                              : document.getElementById("inputfieldFood").value = citizens * Math.floor(grains / 2);
+                              : document.getElementById("inputfieldFood").value = Math.floor(grains / 2);
     // call function to update visual
     foodBeforeAfter();
   }
@@ -444,7 +444,7 @@ function nextRoundButtonPressed() {
     confirmentationOnNextRound();
   }
   else {
-    nextRound();
+    doNextRound();
   }
 
 }
@@ -458,17 +458,38 @@ function taskNotFinished() {
 
 // creates html for displaying next round confirmentation
 function confirmentationOnNextRound() {
-
+  $(".confirmBox")[0].style.display = "flex";
 }
 
-function nextRound() {
+function closeConfirmentationOfNextRound() {
+  $(".confirmBox")[0].style.display = "none";
+}
+
+function doNextRound() {
   // update variables value
   year++
-  grains += fieldYield;
+
+  // sowing was done by the citizen
+  if (confirmSowing) {
+    grains += fieldYield;
+  }
+
   calcAcrePrice();
   // update variables visual
   setUpRound();
   updatesVisualConfirmes()
+
+  // player won
+  if (year > 20) {
+    doGameWon();
+    return;
+  }
+
+  // player lost
+  if (!confirmFood || acres < 1 || grains < 1 || citizens < 1) {
+    doGameLost();
+    return;
+  }
 
   // enables input
   let inputfield = ["#inputfieldFood", "#inputfieldSowing", "#inputfieldAcreSell", "#inputfieldAcreBuy"];
@@ -483,7 +504,55 @@ function nextRound() {
 }
 
 
+function doGameLost() {
+  disableInput();
+
+  let text = "You lost due not having any ";
+  // lost due no food allocation or not having any citizens -> 0 citizen
+  if (!confirmFood || citizens < 1) {
+    document.getElementById("citizen").innerHTML = 0;
+    text += "citizens left.";
+  }
+  // lost due not having any grains -> 0 grains
+  else if(grains < 1) {
+    document.getElementById("grain").innerHTML = grains;
+    text += "grains left.";
+  }
+  // lost due not having any acres -> 0 acres
+  else if (acres < 1) {
+    document.getElementById("acre").innerHTML = acres;
+    text += "acres left.";
+  }
+
+  document.getElementById("resultText").innerHTML = text;
+  $('.gameResult')[0].style.display = "initial";
+}
 
 
+function doGameWon() {
+  disableInput();
+
+  document.getElementById("resultText").innerHTML = "You won!";
+  $('.gameResult')[0].style.display = "initial";
+}
 
 
+function disableInput() {
+    // disables input
+    let inputfield = ["#inputfieldFood", "#inputfieldSowing", "#inputfieldAcreSell", "#inputfieldAcreBuy"];
+    let button = ["#buttonFood", "#buttonSowing", "#buttonSellAcre", "#buttonBuyAcre", "#buttonNextRound"];
+  
+    for (let i = 0; i < Math.max(button.length, inputfield.length); i++) {
+      if (inputfield[i]) {
+        $(inputfield[i]).prop("disabled", true);
+      }
+      if (button[i]) {
+        $(button[i]).prop("disabled", true);
+        $(button[i]).removeClass("active");
+        $(button[i]).removeClass("hover");
+      }
+    }
+
+    let box = $(".confirmBox")[0];
+    box.style.display = "none";
+}
